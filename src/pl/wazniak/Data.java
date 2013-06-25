@@ -11,7 +11,12 @@ public class Data {
 		this.rok = rok;
 	}
 
-	public String pokazDate(){
+	public String pokazDate() {
 		return dzien + "." + miesiac + "." + rok;
- }
+	}
+
+	public void przesunDoPrzoduO7() {
+		dzien = dzien + 7;
+	}
+
 }
