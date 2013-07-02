@@ -6,9 +6,7 @@ public class RekurencjaFibbonacciego {
 		if (n <= 2) {
 			return 1;
 		} else {
-
 			return rekurencjaFibbonacciego(n - 2) + rekurencjaFibbonacciego(n - 1);
 		}
 	}
 }
-
