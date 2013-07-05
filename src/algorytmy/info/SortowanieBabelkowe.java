@@ -7,20 +7,22 @@ public class SortowanieBabelkowe {
 
 	public SortowanieBabelkowe(int n) {
 		this.n = n;
+		tablica = new int[n];
 		tablica = uzupelnianieTablicy();
 	}
 
 	private int[] uzupelnianieTablicy() {
-		for (int a = 0; a <= n; a++) {
+		for (int a = 0; a < n; a++) {
 			tablica[a] = (int) (Math.random() * 100);
 		}
 		return tablica;
 	}
 
 	public void wydrukujTablice() {
-		for (int i = 0; i <= tablica.length; i++) {
-			System.out.println(tablica[i] + " ");
+		for (int i = 0; i < tablica.length; i++) {
+			System.out.print(tablica[i] + " ");
 		}
+		System.out.println("");
 	}
 
 	public void sortuj() {
@@ -30,7 +32,7 @@ public class SortowanieBabelkowe {
 			}
 		}
 		for (int j = 0; j < n; j++) {
-			for (int a = 0; a < n; a++) {
+			for (int a = 0; a < n - 1; a++) {
 				if (tablica[a] > tablica[a + 1]) {
 					if (tablica[a] > tablica[a + 1]) {
 						int pomocnicza = tablica[a + 1];

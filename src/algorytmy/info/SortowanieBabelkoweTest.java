@@ -6,6 +6,7 @@ public class SortowanieBabelkoweTest {
 		SortowanieBabelkowe wynik = new SortowanieBabelkowe(7);
 		wynik.wydrukujTablice();
 		wynik.sortuj();
+		System.out.println("Po sortowaniu: ");
 		wynik.wydrukujTablice();
 
 	}
