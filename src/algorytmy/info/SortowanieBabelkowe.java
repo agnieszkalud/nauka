@@ -12,7 +12,8 @@ public class SortowanieBabelkowe {
 
 	private int[] uzupelnianieTablicy() {
 		for (int a = 0; a <= n; a++) {
-			tablica[a] = (int) (Math.random() * 100);
+			tablica[a] = (int) (Math.random() * 100);//nadal tutaj NullPointer i  nie wiem dlaczego
+
 		}
 		return tablica;
 	}
