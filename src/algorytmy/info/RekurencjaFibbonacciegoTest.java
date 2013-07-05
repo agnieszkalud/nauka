@@ -15,7 +15,7 @@ public class RekurencjaFibbonacciegoTest {
 		 * wyjątek związany z przekroczeniem zakresu:
 		 * "The literal 2147483648 of type int is out of range"
 		 */
-		int wynik2 = RekurencjaFibbonacciego2.rekurencjaFibbonacciego2(214);
+		int wynik2 = RekurencjaFibbonacciego2.rekurencjaFibbonacciego2(214748);
 		System.out.println("Wartość ciągu Fibbonacciego dla liczby 5 wynosi " + wynik2);
 	}
 }

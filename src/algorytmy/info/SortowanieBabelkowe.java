@@ -25,7 +25,7 @@ public class SortowanieBabelkowe {
 		System.out.println("");
 	}
 
-	public void sortuj() {
+	public void sortujRosnaco() {
 		for (int i = 0; i < tablica.length; i++) {
 			if (tablica[i] > najwieksza) {
 				najwieksza = tablica[i];
@@ -33,14 +33,30 @@ public class SortowanieBabelkowe {
 		}
 		for (int j = 0; j < n; j++) {
 			for (int a = 0; a < n - 1; a++) {
-				if (tablica[a] > tablica[a + 1]) {
 					if (tablica[a] > tablica[a + 1]) {
 						int pomocnicza = tablica[a + 1];
 						tablica[a + 1] = tablica[a];
 						tablica[a] = pomocnicza;
 					}
+			}
+		}
+	}
+
+	public void sortujMalejaco() {
+		for (int i = 0; i < tablica.length; i++) {
+			if (tablica[i] > najwieksza) {
+				najwieksza = tablica[i];
+			}
+		}
+		for (int j = 0; j < n; j++) {
+			for (int a = 0; a < n - 1; a++) {
+				if (tablica[a] < tablica[a + 1]) {
+					int pomocnicza = tablica[a + 1];
+					tablica[a + 1] = tablica[a];
+					tablica[a] = pomocnicza;
 				}
 			}
 		}
 	}
+
 }
