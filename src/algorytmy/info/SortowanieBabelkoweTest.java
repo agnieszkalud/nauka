@@ -13,5 +13,6 @@ public class SortowanieBabelkoweTest {
 		wynik.sortujMalejaco();
 		System.out.println("Po sortowaniu: ");
 		wynik.wydrukujTablice();
+
 	}
 }
