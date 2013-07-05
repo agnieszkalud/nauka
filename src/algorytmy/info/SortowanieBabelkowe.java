@@ -17,6 +17,7 @@ public class SortowanieBabelkowe {
 			tablica[a] = (int) (Math.random() * 100);
 		}
 		return tablica;
+
 	}
 
 	public void wydrukujTablice() {
