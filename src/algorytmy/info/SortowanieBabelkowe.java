@@ -13,6 +13,7 @@ public class SortowanieBabelkowe {
 	private int[] uzupelnianieTablicy() {
 		for (int a = 0; a <= n; a++) {
 			tablica[a] = (int) (Math.random() * 100);
+
 		}
 		return tablica;
 	}

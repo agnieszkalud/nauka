@@ -7,6 +7,5 @@ public class SortowanieBabelkoweTest {
 		wynik.wydrukujTablice();
 		wynik.sortuj();
 		wynik.wydrukujTablice();
-
 	}
 }
