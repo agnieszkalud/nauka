@@ -1,38 +1,33 @@
 package algorytmy.info;
 
 public class SortowanieBabelkowe {
-	int n;
-	int tablica[];
-	int najwieksza = 0;
+	// int n;
+	// int tablica[];
 
-	public SortowanieBabelkowe(int n) {
-		this.n = n;
-		tablica = new int[n];
-		tablica = uzupelnianieTablicy();
-	}
+	// public SortowanieBabelkowe(int n) {
+	// this.n = n;
+	// tablica = new int[n];
+	// uzupelnianieTablicy();
+	// }
 
-	private int[] uzupelnianieTablicy() {
+	// private void uzupelnianieTablicy() {
+	//
+	// for (int a = 0; a < n; a++) {
+	// tablica[a] = (int) (Math.random() * 100);
+	// }
+	// }
 
-		for (int a = 0; a < n; a++) {
-		}
-		return tablica;
-	}
-
-	public void wydrukujTablice() {
+	public static void wydrukujTablice(int[] tablica) {
 		for (int i = 0; i < tablica.length; i++) {
 			System.out.print(tablica[i] + " ");
 		}
 		System.out.println("");
 	}
 
-	public void sortujRosnaco() {
-		for (int i = 0; i < tablica.length; i++) {
-			if (tablica[i] > najwieksza) {
-				najwieksza = tablica[i];
-			}
-		}
-		for (int j = 0; j < n; j++) {
-			for (int a = 0; a < n - 1; a++) {
+	public static int[] sortujRosnaco(int[] tablica) {
+
+		for (int j = 0; j < tablica.length; j++) {
+			for (int a = 0; a < tablica.length - 1; a++) {
 					if (tablica[a] > tablica[a + 1]) {
 						int pomocnicza = tablica[a + 1];
 						tablica[a + 1] = tablica[a];
@@ -40,16 +35,13 @@ public class SortowanieBabelkowe {
 					}
 			}
 		}
+		return tablica;
 	}
 
-	public void sortujMalejaco() {
-		for (int i = 0; i < tablica.length; i++) {
-			if (tablica[i] > najwieksza) {
-				najwieksza = tablica[i];
-			}
-		}
-		for (int j = 0; j < n; j++) {
-			for (int a = 0; a < n - 1; a++) {
+	public static int[] sortujMalejaco(int[] tablica) {
+
+		for (int j = 0; j < tablica.length; j++) {
+			for (int a = 0; a < tablica.length - 1; a++) {
 				if (tablica[a] < tablica[a + 1]) {
 					int pomocnicza = tablica[a + 1];
 					tablica[a + 1] = tablica[a];
@@ -57,6 +49,7 @@ public class SortowanieBabelkowe {
 				}
 			}
 		}
+		return tablica;
 	}
 
 }
