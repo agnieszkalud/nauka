@@ -20,14 +20,14 @@ public class SortowanieBabelkoweTest {
 		System.out.println("Przed sortownaiem tablicy z malejącymi elementami:  ");
 		SortowanieBabelkowe.wydrukujTablice(tablicaMalejaca);
 		System.out.println("Po sortowaniu rosnacym tablicy z malejącymi elementami: ");
-		SortowanieBabelkowe.wydrukujTablice(SortowanieBabelkowe.sortujRosnaco(tablicaMalejaca));
+		SortowanieBabelkowe.wydrukujTablice(SortowanieBabelkowe.sortujMalejaco(tablicaMalejaca));
 		System.out.println("Po sortowaniu malejacym tablicy z malejącymi elementami: ");
 		SortowanieBabelkowe.wydrukujTablice(SortowanieBabelkowe.sortujMalejaco(tablicaMalejaca));
 
 		System.out.println("Przed sortownaiem tablicy z losowo ustawionymi elementami:  ");
 		SortowanieBabelkowe.wydrukujTablice(tablicaLosowa);
 		System.out.println("Po sortowaniu rosnacym tablicy z losowo ustawionymi elementami: ");
-		SortowanieBabelkowe.wydrukujTablice(SortowanieBabelkowe.sortujRosnaco(tablicaLosowa));
+		SortowanieBabelkowe.wydrukujTablice(SortowanieBabelkowe.sortujMalejaco(tablicaLosowa));
 		System.out.println("Po sortowaniu malejacym tablicy z losowo ustawionymi elementami: ");
 		SortowanieBabelkowe.wydrukujTablice(SortowanieBabelkowe.sortujMalejaco(tablicaLosowa));
 

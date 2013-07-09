@@ -1,5 +1,15 @@
 package algorytmy.info;
-
+/**
+ * Algorytm:
+	SORTOWANIE-BĄBELKOWE(A)
+	1. for i := 2 to n do
+	2. for j := n downto i do
+	3. if A[j] < A[j − 1] then
+	4. A[j] ↔ A[j – 1]
+	 
+ * @author - Agneszka
+ *
+ */
 public class SortowanieBabelkowe {
 	// int n;
 	// int tablica[];
