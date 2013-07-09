@@ -24,7 +24,8 @@ public class SortowanieBabelkowe {
 		System.out.println("");
 	}
 
-	public static int[] sortujRosnaco(int[] tablica) {
+//	public static int[] sortujRosnaco(int[] tablica) {
+	public static sortujRosnaco(int[] tablica) {
 
 		for (int j = 0; j < tablica.length; j++) {
 			for (int a = 0; a < tablica.length - 1; a++) {
@@ -35,7 +36,12 @@ public class SortowanieBabelkowe {
 					}
 			}
 		}
-		return tablica;
+		for (int i = 0; i < tablica.length; i++) {
+			System.out.print(tablica[i] + " ");
+		}
+		System.out.println("");
+	}
+		//return tablica;
 	}
 
 	public static int[] sortujMalejaco(int[] tablica) {

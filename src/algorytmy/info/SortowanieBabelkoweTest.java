@@ -12,7 +12,8 @@ public class SortowanieBabelkoweTest {
 		System.out.println("Przed sortownaiem tablicy z rosnącymi elementami:  ");
 		SortowanieBabelkowe.wydrukujTablice(tablicaRosnaca);
 		System.out.println("Po sortowaniu rosnacym tablicy z rosnącymi elementami: ");
-		SortowanieBabelkowe.wydrukujTablice(SortowanieBabelkowe.sortujRosnaco(tablicaRosnaca));
+		// SortowanieBabelkowe.wydrukujTablice(SortowanieBabelkowe.sortujRosnaco(tablicaRosnaca));
+		SortowanieBabelkowe.sortujRosnaco(tablicaRosnaca);
 		System.out.println("Po sortowaniu malejacym tablicy z rosnącymi elementami: ");
 		SortowanieBabelkowe.wydrukujTablice(SortowanieBabelkowe.sortujMalejaco(tablicaRosnaca));
 
