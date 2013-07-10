@@ -14,22 +14,27 @@ public class SortowanieBabelkoweTest {
 		System.out.println("Po sortowaniu rosnacym tablicy z rosnącymi elementami: ");
 		// SortowanieBabelkowe.wydrukujTablice(SortowanieBabelkowe.sortujRosnaco(tablicaRosnaca));
 		SortowanieBabelkowe.sortujRosnaco(tablicaRosnaca);
+		SortowanieBabelkowe.wydrukujTablice(tablicaRosnaca);
 		System.out.println("Po sortowaniu malejacym tablicy z rosnącymi elementami: ");
-		SortowanieBabelkowe.wydrukujTablice(SortowanieBabelkowe.sortujMalejaco(tablicaRosnaca));
+		SortowanieBabelkowe.sortujMalejaco(tablicaRosnaca);
+		SortowanieBabelkowe.wydrukujTablice(tablicaRosnaca);
 
 		System.out.println("Przed sortownaiem tablicy z malejącymi elementami:  ");
 		SortowanieBabelkowe.wydrukujTablice(tablicaMalejaca);
 		System.out.println("Po sortowaniu rosnacym tablicy z malejącymi elementami: ");
-		SortowanieBabelkowe.wydrukujTablice(SortowanieBabelkowe.sortujMalejaco(tablicaMalejaca));
+		SortowanieBabelkowe.sortujRosnaco(tablicaMalejaca);
+		SortowanieBabelkowe.wydrukujTablice(tablicaMalejaca);
 		System.out.println("Po sortowaniu malejacym tablicy z malejącymi elementami: ");
-		SortowanieBabelkowe.wydrukujTablice(SortowanieBabelkowe.sortujMalejaco(tablicaMalejaca));
+		SortowanieBabelkowe.sortujMalejaco(tablicaMalejaca);
+		SortowanieBabelkowe.wydrukujTablice(tablicaMalejaca);
 
 		System.out.println("Przed sortownaiem tablicy z losowo ustawionymi elementami:  ");
 		SortowanieBabelkowe.wydrukujTablice(tablicaLosowa);
 		System.out.println("Po sortowaniu rosnacym tablicy z losowo ustawionymi elementami: ");
-		SortowanieBabelkowe.wydrukujTablice(SortowanieBabelkowe.sortujMalejaco(tablicaLosowa));
+		SortowanieBabelkowe.sortujRosnaco(tablicaLosowa);
+		SortowanieBabelkowe.wydrukujTablice(tablicaLosowa);
 		System.out.println("Po sortowaniu malejacym tablicy z losowo ustawionymi elementami: ");
-		SortowanieBabelkowe.wydrukujTablice(SortowanieBabelkowe.sortujMalejaco(tablicaLosowa));
-
+		SortowanieBabelkowe.sortujMalejaco(tablicaLosowa);
+		SortowanieBabelkowe.wydrukujTablice(tablicaLosowa);
 	}
 }
