@@ -12,7 +12,7 @@ public class SortowaniePrzezScalanieRekurencja {
 	private int[] tablica; // odwołanie do tablicy
 	private int nElems; // ilosć elementow w tablicy
 
-		public SortowaniePrzezScalanieRekurencja(int tablica[]) { // konstruktor
+	public SortowaniePrzezScalanieRekurencja(int tablica[]) { // konstruktor
 		this.tablica = new int[tablica.length]; // stworzenie tablicy
 		for (int i = 0; i < tablica.length; i++) {
 			this.tablica[i] = tablica[i];
@@ -57,7 +57,7 @@ public class SortowaniePrzezScalanieRekurencja {
 			return;
 		}
 
-			else {
+		else {
 			int srodek = (pktPoczatek + pktKoniec) / 2;// wyznaczenie punktu
 														// środkowego
 														// analizowanego zakresu
@@ -125,4 +125,4 @@ public class SortowaniePrzezScalanieRekurencja {
 			tablica[pktPoczatek + j] = tPomocnicza[j];
 		}
 	}
-	}
+}
