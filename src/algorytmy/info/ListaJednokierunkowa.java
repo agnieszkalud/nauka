@@ -4,6 +4,7 @@ public class ListaJednokierunkowa {
 
 	private ListaJednokierunkowaWezel poczatek;
 	private ListaJednokierunkowaWezel koniec;
+	private int size;
 
 	public ListaJednokierunkowa() {
 		poczatek = null;
@@ -16,6 +17,7 @@ public class ListaJednokierunkowa {
 			koniec = wezel;
 		}
 		poczatek = wezel;
+		size++;
 		System.out.println(poczatek);
 	}
 
@@ -26,17 +28,19 @@ public class ListaJednokierunkowa {
 		} else {
 			koniec.setNastepce(nowyWezel);
 		}
-
 		koniec = nowyWezel;
+		size++;
 	}
 
 	public ListaJednokierunkowaWezel usunZPoczatku() {
 
 		if (czyPusta()) {
+			size = 0;
 			return null;
 		} else {
 			ListaJednokierunkowaWezel pomoczniczy = poczatek;
 			poczatek = poczatek.getNastepce();
+			size--;
 			return pomoczniczy;
 		}
 
@@ -55,4 +59,12 @@ public class ListaJednokierunkowa {
 		System.out.println(" ");
 	}
 
+	/**
+	 * Metoda zwracająca aktualny rozmiar listy
+	 * 
+	 * @return rozmiar listy
+	 */
+	public int getSize() {
+		return size;
+	}
 }

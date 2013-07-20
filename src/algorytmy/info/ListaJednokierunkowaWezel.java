@@ -23,6 +23,7 @@ public class ListaJednokierunkowaWezel {
 		this.nastepca = nastepca;
 	}
 
+
 	public String toString() {
 		return klucz.toString();
 	}

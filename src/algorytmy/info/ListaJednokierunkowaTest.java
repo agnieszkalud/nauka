@@ -14,6 +14,7 @@ public class ListaJednokierunkowaTest {
 		lista.wyswietl();
 
 		lista.usunZPoczatku();
+		System.out.println("Rozmiar tablicy po usunieciu początkowego elementu: " + lista.getSize());
 		lista.dodajNaKoniec("1");
 		lista.dodajNaKoniec("2");
 		lista.dodajNaKoniec("3");
