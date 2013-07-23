@@ -23,7 +23,13 @@ public class ListaJednokierunkowaWezel {
 		this.nastepca = nastepca;
 	}
 
+	public String getKlucz() {
+		return klucz;
+	}
 
+	/*
+	 * public void setKlucz(String klucz) { this.klucz = klucz; }
+	 */
 	public String toString() {
 		return klucz.toString();
 	}

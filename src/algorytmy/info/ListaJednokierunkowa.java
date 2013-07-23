@@ -18,7 +18,7 @@ public class ListaJednokierunkowa {
 		}
 		poczatek = wezel;
 		size++;
-		System.out.println(poczatek);
+		System.out.println("Wstawiam " + poczatek);
 	}
 
 	public void dodajNaKoniec(String element) {
@@ -30,6 +30,7 @@ public class ListaJednokierunkowa {
 		}
 		koniec = nowyWezel;
 		size++;
+		System.out.println("Wstawiam " + koniec);
 	}
 
 	public ListaJednokierunkowaWezel usunZPoczatku() {
@@ -51,6 +52,9 @@ public class ListaJednokierunkowa {
 	}
 
 	public void wyswietl() {
+		if (czyPusta()) {
+			System.out.println("Lista jest pusta");
+		}
 		ListaJednokierunkowaWezel pomocniczy = poczatek;
 		while (pomocniczy != null) {
 			System.out.print(pomocniczy + " ");
@@ -66,5 +70,53 @@ public class ListaJednokierunkowa {
 	 */
 	public int getSize() {
 		return size;
+	}
+
+	public void usunElement(String element) {
+		if (znajdz(element) == "") {
+			return;
+		}
+		if (poczatek.getKlucz().equals(element)) {
+			poczatek = poczatek.getNastepce();
+			size--;
+			return;
+		}
+
+		if (koniec.getKlucz().equals(element)) {
+			koniec = null;
+			size--;
+			return;
+		}
+		ListaJednokierunkowaWezel pomoc = poczatek;
+		while (pomoc.getNastepce() != koniec) {
+			if (pomoc.getNastepce().getKlucz().equals(element)) {
+				pomoc.setNastepce(pomoc.getNastepce().getNastepce());
+				size--;
+				return;
+			}
+			pomoc = pomoc.getNastepce();
+		}
+	}
+
+	public String znajdz(String elem) {
+		ListaJednokierunkowaWezel pomoc = poczatek;
+		while (pomoc != null) {
+			if (pomoc.getKlucz().equals(elem)) {
+				System.out.println("Znaleziono element " + elem);
+				return elem;
+			}
+			pomoc = pomoc.getNastepce();
+		}
+		System.out.println("Nie znaleziono elementu " + elem);
+		return "";
+	}
+
+	public void usunWszystkie() {
+		while (poczatek != null) {
+			ListaJednokierunkowaWezel pomoc = poczatek;
+			poczatek = pomoc.getNastepce();
+			pomoc = null;
+		}
+		size = 0;
 	}
 }
