@@ -140,4 +140,17 @@ public class ListaDwukierunkowa {
 		}
 		System.out.println("Rozmiar listy: " + i);
 	}
+
+	public String znajdz(String elem) {
+		ListaDwukierunkowaWezel pomoc = poczatek;
+		while (pomoc != null) {
+			if (pomoc.getKlucz().equals(elem)) {
+				System.out.println("Znaleziono element " + elem);
+				return elem;
+			}
+			pomoc = pomoc.getNastepce();
+		}
+		System.out.println("Nie znaleziono elementu " + elem);
+		return "";
+	}
 }

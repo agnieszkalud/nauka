@@ -11,7 +11,7 @@ public class ListaDwukierunkowaTest {
 		lista.wstawianieNaPoczatek("Trzy");
 		lista.rozmiar();
 
-		// lista.znajdz("Dwa");
+		lista.znajdz("Dwa");
 
 		lista.usunOstatniElement();
 		lista.wyswietlOdPoczatku();
