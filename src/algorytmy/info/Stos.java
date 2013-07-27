@@ -34,6 +34,10 @@ public class Stos {
 	 * zdejmij(ang. pop) pobiera element ze szytu stosu
 	 */
 	public int zdejmij() {
+		if (jestPusty()) {
+			System.out.println("Stos jest pusty");
+			return -1;
+		}
 		return tabStosu[szczyt--];// pobieram element, zmniejszam szczyt
 	}
 
@@ -42,8 +46,12 @@ public class Stos {
 	 * 
 	 * @return
 	 */
-	public int podejrzyj() {
-		return tabStosu[szczyt];
+	public void podejrzyj() {
+		if (jestPusty()) {
+			System.out.println("Stos jest pusty");
+			return;
+		}
+		System.out.println("Wartość na szczycie: " + tabStosu[szczyt]);
 	}
 
 	/**

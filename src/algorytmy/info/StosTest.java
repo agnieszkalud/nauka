@@ -15,6 +15,7 @@ public class StosTest {
 		stos.zobaczSklad();
 
 		stos.zdejmijWszystko();
+		stos.zdejmij();
 	}
 }
 
