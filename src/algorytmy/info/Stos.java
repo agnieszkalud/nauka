@@ -27,6 +27,10 @@ public class Stos {
 	 * metoda odluz(ang. push)do odkladania elementow na szczyt stosu
 	 */
 	public void odloz(int j) {
+		if (szczyt + 1 >= maxRozmiar) {
+			System.out.println("Nie można dodać elementu, za mała tablica");
+			return;
+		}
 		tabStosu[++szczyt] = j;// zwiekszam szyt(ang. top), odkladam element
 	}
 
@@ -68,6 +72,10 @@ public class Stos {
 	}
 
 	public void zobaczSklad() {
+		if (jestPusty()) {
+			System.out.println("Na stosie nie ma elementów");
+			return;
+		}
 		int pomocnicza = szczyt;
 		while (pomocnicza != -1) {
 			System.out.print(tabStosu[pomocnicza] + " ");

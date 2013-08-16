@@ -10,16 +10,14 @@ public class Kolejka {
 	private int[] kolejka;
 	private int poczatek;// ang.front
 	private int koniec; // ang. rear
-	private int nElem;
-	private int[] nowaKolejka;
-	int licz;
+	private int iloscElementow;
 
 	public Kolejka(int s) {// konstruktor
 		maxRozmiar = s;
 		kolejka = new int[maxRozmiar];
 		poczatek = 0;
 		koniec = -1;
-		nElem = 0;
+		iloscElementow = 0;
 	}
 
 	/**
@@ -28,6 +26,7 @@ public class Kolejka {
 	 * @param j
 	 */
 	public void dodaj(int j) {
+		int[] nowaKolejka;
 		int maxBufor = maxRozmiar - 1;
 		if (koniec == maxBufor) {// zawiniecie
 			nowaKolejka = new int[kolejka.length + 1];
@@ -37,15 +36,16 @@ public class Kolejka {
 			}
 			nowaKolejka[i] = j;
 			kolejka = nowaKolejka;
-			nElem++;
+			iloscElementow++;
+			// a moze powinno byc koniec++;
 			return;
 
 		}
 		kolejka[++koniec] = j;// zwiększam zmienną koniec i wstawiam element
-		nElem++;// przybył element
-		if (nElem > maxRozmiar) {
-			nElem = maxRozmiar;
-		}
+		iloscElementow++;// przybył element
+		/*
+		 * if (iloscElementow > maxRozmiar) { iloscElementow = maxRozmiar; }
+		 */
 	}
 
 	/**
@@ -54,23 +54,26 @@ public class Kolejka {
 	 * @return
 	 */
 	public void kasuj() {
-		if (nElem == 0) {
+		int licz = 0;
+		if (iloscElementow == 0) {
 			System.out.println("W kolejce nie ma elementów do usunięcia ");
 			return;
 		}
 		// poczatek = poczatek % nElem;
 		System.out.println("poczatek " + poczatek);
-		if (poczatek == nElem && licz != 1) {// zmienna i zapobiega drugiemu
+		if (poczatek == iloscElementow && licz != 1) {// zmienna i zapobiega
+														// drugiemu
 			// wejsciu do tego if
 			poczatek = -1;
 			licz++;
 		}
 
-		int tymczasowa = kolejka[++poczatek];
+		int tymczasowa = kolejka[poczatek];
 		kolejka[poczatek] = 0;
+		poczatek++;
 		// poczatek++;
-		nElem--;
-		System.out.println("elem " + nElem);
+		iloscElementow--;
+		System.out.println("elem " + iloscElementow);
 		System.out.println("Usunieto element " + tymczasowa);
 	}
 
@@ -93,7 +96,7 @@ public class Kolejka {
 	 * @return
 	 */
 	public boolean jestPusta() {
-		return (nElem == 0);
+		return (iloscElementow == 0);
 	}
 
 	/**
@@ -102,7 +105,7 @@ public class Kolejka {
 	 * @return
 	 */
 	public boolean jestPelna() {
-		return (nElem == maxRozmiar);
+		return (iloscElementow == maxRozmiar);
 	}
 
 	/**
@@ -111,7 +114,7 @@ public class Kolejka {
 	 * @return
 	 */
 	public int rozmiar() {
-		return nElem;
+		return iloscElementow;
 	}
 
 	/**
@@ -122,11 +125,10 @@ public class Kolejka {
 			System.out.println("Nie ma elementów w tej kolejce.");
 			return;
 		}
-		int tymczasowa = nElem;
-		while (tymczasowa != 0) {
-			System.out.print(kolejka[poczatek] + " ");
-			poczatek++;
-			tymczasowa--;
+		int tymczasowa = poczatek;
+		for (int i = 0; i < iloscElementow; i++) {
+			System.out.print(kolejka[tymczasowa] + " ");
+			tymczasowa++;
 		}
 		System.out.println("");
 	}
