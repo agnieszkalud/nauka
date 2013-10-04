@@ -30,13 +30,16 @@ public class Liczba2Test extends TestCase {
 
 
 	public final void testKonwersjaNaInnySystem() {
-		fail("Not yet implemented"); // TODO
+		int system = 8;
+		String wynikKonwersji = liczba2.konwersjaNaInnySystem(system);
+		assertTrue(wynikKonwersji == "15");
 	}
 
 	public final void testKonwersja() {
 		int system = 2;
 		String wynikKonwersji = liczba2.konwersja(system);
 		assertEquals(1101, wynikKonwersji);
+		assertTrue(wynikKonwersji == "1101");
 	}
 
 	public final void testMain() {
