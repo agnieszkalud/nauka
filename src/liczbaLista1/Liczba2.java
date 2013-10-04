@@ -35,11 +35,12 @@ public class Liczba2 {
 
 	public static void main(String[] args) {
 
-		Liczba2 liczba2 = new Liczba2(13);
+		int argument = 13;
+		Liczba2 liczba2 = new Liczba2(argument);
 		// public Liczba2() {
 		for (int system = 2; system <= 16; system++) {
 
-			System.out.println("liczba " + liczba + " w sytemie " + system + " = " + liczba2.konwersja(system));
+			System.out.println("liczba " + argument + " w sytemie " + system + " = " + liczba2.konwersja(system));
 
 		}
 
