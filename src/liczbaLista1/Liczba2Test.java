@@ -34,7 +34,9 @@ public class Liczba2Test extends TestCase {
 	}
 
 	public final void testKonwersja() {
-		fail("Not yet implemented"); // TODO
+		int system = 2;
+		String wynikKonwersji = liczba2.konwersja(system);
+		assertEquals(1101, wynikKonwersji);
 	}
 
 	public final void testMain() {
