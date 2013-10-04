@@ -3,11 +3,12 @@ package liczbaLista1;
 public class Liczba {
 
 	private int liczba;
+	private int system;
 
-	static String tablicaHex[] = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F" };
+	private static String tablicaHex[] = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F" };
 
 	public Liczba(int liczba) {
-		this.liczba = 13;
+		// this.liczba = 13;
 		konwersja(liczba);
 	}
 
@@ -30,11 +31,12 @@ public class Liczba {
 	public void konwersja(int liczba) {
 		try {
 			poprawnoscLiczby(liczba);
+			konwersjaNaInnySystem(system);
+			// for (int system = 2; system <= 16; system++) {
 
-			for (int system = 2; system <= 16; system++) {
-
-				System.out.println("liczba " + liczba + " w sytemie " + system + " = " + konwersjaNaInnySystem(system));
-			}
+			// System.out.println("liczba " + liczba + " w sytemie " + system +
+			// " = " + konwersjaNaInnySystem(system));
+			// }
 		} catch (LiczbaException e) {
 			System.out.println(e.getMessage());
 		}
