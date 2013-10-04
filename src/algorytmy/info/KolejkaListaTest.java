@@ -2,7 +2,7 @@ package algorytmy.info;
 
 public class KolejkaListaTest {
 
-	public static void mian(String[] args) {
+	public static void main(String[] args) {
 
 		KolejkaLista kolejkaLista = new KolejkaLista();
 
