@@ -27,9 +27,9 @@ public class Liczba2 {
 		return liczbaHex;
 	}
 
-	public void konwersja(int podstawa) {
+	public String konwersja(int podstawa) {
 		poprawnoscLiczby(liczba);
-		konwersjaNaInnySystem(podstawa);
+		return konwersjaNaInnySystem(podstawa);
 
 	}
 
