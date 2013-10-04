@@ -3,7 +3,7 @@ package liczbaLista1;
 
 public class Liczba2 {
 
-	private int liczba = 13;
+	private int liczba;
 
 	static String tablicaHex[] = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F" };
 
@@ -39,7 +39,7 @@ public class Liczba2 {
 		// public Liczba2() {
 		for (int system = 2; system <= 16; system++) {
 
-			System.out.println("liczba " + liczba2.liczba + " w sytemie " + system + " = " + liczba2.konwersja(system));
+			System.out.println("liczba " + liczba + " w sytemie " + system + " = " + liczba2.konwersja(system));
 
 		}
 
