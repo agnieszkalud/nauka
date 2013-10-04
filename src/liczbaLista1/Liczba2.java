@@ -11,10 +11,12 @@ public class Liczba2 {
 		this.liczba = liczba;
 	}
 
-	private void poprawnoscLiczby(int liczba) {
+	private int poprawnoscLiczby(int liczba) {
 		if (liczba < 0) {
 			System.out.println("Niepoprawna zapis liczby.");
+			return 0;
 		}
+		return 1;
 	}
 
 	public String konwersjaNaInnySystem(int podstawa) {
