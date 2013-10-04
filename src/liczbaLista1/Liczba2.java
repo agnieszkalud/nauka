@@ -11,7 +11,7 @@ public class Liczba2 {
 		this.liczba = liczba;
 	}
 
-	private int poprawnoscLiczby(int liczba) {
+	public int poprawnoscLiczby(int liczba) {
 		if (liczba < 0) {
 			System.out.println("Niepoprawna zapis liczby.");
 			return 0;

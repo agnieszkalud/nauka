@@ -12,10 +12,12 @@ import junit.framework.TestCase;
 public class Liczba2Test extends TestCase {
 
 	Liczba2 liczba2;
+	private int liczba;
 
 	protected void setUp() throws Exception {
 		super.setUp();
-		liczba2 = new Liczba2(13);
+		this.liczba = 13;
+		liczba2 = new Liczba2(liczba);
 	}
 
 	protected void tearDown() throws Exception {
@@ -25,9 +27,13 @@ public class Liczba2Test extends TestCase {
 
 
 	public final void testLiczba2() {
-		fail("Not yet implemented"); // TODO
+		assertNotNull(liczba2);
 	}
 
+	public final void testpoprawnoscLiczby() {
+		assertFalse(liczba < 0);
+		assertTrue(liczba > 0);
+	}
 
 	public final void testKonwersjaNaInnySystem() {
 		int system = 8;
