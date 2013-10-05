@@ -12,7 +12,7 @@ public class Liczba {
 	}
 
 	public void poprawnoscLiczby(int liczba) throws LiczbaException {
-		if (liczba < 0) {
+		if (liczba <= 0) {
 			throw new LiczbaException(" Nieprawidlowa liczba");
 		}
 	}
@@ -20,7 +20,7 @@ public class Liczba {
 	public String konwersjaNaInnySystem(int podstawa) {
 		String liczbaHex = "";
 		int dana = liczba;
-		while (dana > 0) {
+		while (dana >= 0) {
 			liczbaHex = tablicaHex[dana % podstawa] + liczbaHex;
 			dana = dana / podstawa;
 		}
