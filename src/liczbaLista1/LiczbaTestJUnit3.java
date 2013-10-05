@@ -19,13 +19,20 @@ public class LiczbaTestJUnit3 extends TestCase {
 	}
 
 	public final void testLiczba() {
-		fail("Not yet implemented"); // TODO
+		assertNotNull(liczba);
 	}
 
-	public final void testPoprawnoscLiczby() {
-		fail("Not yet implemented"); // TODO
+	public final void testPoprawnoscLiczby() throws LiczbaException {
+		int nieproprawnaLiczbaDoKonwersji = -1;
+		liczba = new Liczba(nieproprawnaLiczbaDoKonwersji);
 	}
 
+	// public static Test suite() {
+	// TestSuite suite = new TestSuite();
+	// suite.addTest(
+	// new ExceptionTestCase("testIndexOutOfBounds",LiczbaException.class);
+	// return suite;
+	// }
 	public final void testKonwersjaNaSzstemBinarny() {
 		int system = 2;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
@@ -46,13 +53,13 @@ public class LiczbaTestJUnit3 extends TestCase {
 	public final void testKonwersjaNaSzstemPiatkowy() {
 		int system = 5;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
-		assertEquals(31,wynikKonwersji);
+		assertSame("31", wynikKonwersji);
 	}
 
 	public final void testKonwersjiNaSystemSzostkowy() {
 		int system = 6;
-		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
-		assertTrue(wynikKonwersji.equals("24"));
+		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);// odp.24
+		assertNotSame("23", wynikKonwersji);
 	}
 	public final void testKonwersjaNaSzstemSiodemkowy() {
 		int system = 7;
@@ -105,8 +112,8 @@ public class LiczbaTestJUnit3 extends TestCase {
 		assertEquals(10,wynikKonwersji);
 	}
 	
-	public final void testKonwersja() {
-		fail("Not yet implemented"); // TODO
-	}
+	// public final void testKonwersja() {
+	// fail("Not yet implemented"); // TODO
+	// }
 
 }
