@@ -16,6 +16,7 @@ public class LiczbaTestJUnit3 extends TestCase {
 
 	protected void tearDown() throws Exception {
 		super.tearDown();
+		liczba = null;
 	}
 
 	public final void testLiczba() {
@@ -41,7 +42,7 @@ public class LiczbaTestJUnit3 extends TestCase {
 	public final void testKonwersjaNaSzstemTrójkowy() {
 		int system = 3;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
-		assertEquals(121,wynikKonwersji);
+		assertEquals("121", wynikKonwersji);
 	}
 
 	public final void testKonwersjaNaSzstemCzworkowy() {
@@ -74,7 +75,7 @@ public class LiczbaTestJUnit3 extends TestCase {
 	public final void testKonwersjaNaSzstemDziewiatkowy() {
 		int system = 9;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
-		assertEquals(17,wynikKonwersji);
+		assertEquals("17", wynikKonwersji);
 	}
 	public final void testKonwersjaNaSzstemDziesiatkowy() {
 		int system = 10;
@@ -89,7 +90,7 @@ public class LiczbaTestJUnit3 extends TestCase {
 	public final void testKonwersjaNaSzstemDwunastkowy() {
 		int system = 12;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
-		assertEquals(14,wynikKonwersji);
+		assertEquals("14", wynikKonwersji);
 	}
 	public final void testKonwersjaNaSzstemTrzynastkowy() {
 		int system = 13;
@@ -104,16 +105,12 @@ public class LiczbaTestJUnit3 extends TestCase {
 	public final void testKonwersjaNaSzstemPietnastkowy() {
 		int system = 15;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
-		assertEquals(11,wynikKonwersji);
+		assertEquals("11", wynikKonwersji);
 	}
 	public final void testKonwersjaNaSzstemSzesnastkowy() {
 		int system = 16;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
-		assertEquals(10,wynikKonwersji);
+		assertEquals("10", wynikKonwersji);
 	}
-	
-	// public final void testKonwersja() {
-	// fail("Not yet implemented"); // TODO
-	// }
 
 }
