@@ -37,6 +37,7 @@ public class LiczbaTest {
 			if (!(e instanceof LiczbaException)) {
 				fail("Konstruktor rzucił nieoczekiwany wyjatek");
 			}
+			assertEquals(e.getMessage(), " Nieprawidlowa liczba");
 		}
 	}
 
