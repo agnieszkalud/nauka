@@ -4,28 +4,47 @@ import junit.framework.TestCase;
 
 public class LiczbaTestJUnit3 extends TestCase {
 
-	
+
 	private int liczbaDoKonwersji;
 	Liczba liczba;
 
+	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
 		this.liczbaDoKonwersji = 16;
 		liczba = new Liczba(liczbaDoKonwersji);
 	}
 
+	@Override
 	protected void tearDown() throws Exception {
 		super.tearDown();
 		liczba = null;
 	}
 
-	public final void testLiczba() {
+	public final void testPoprawnoscUtowrzenieObiektuLiczbyDlaPrawidlowegoParametru() throws LiczbaException {
+		int nieproprawnaLiczbaDoKonwersji = 123;
+		liczba = new Liczba(nieproprawnaLiczbaDoKonwersji);
 		assertNotNull(liczba);
 	}
 
-	public final void testPoprawnoscLiczby() throws LiczbaException {
+	public final void testPoprawnoscWyjatkuJesliTworzonyJestObiektDlaDlaNieprawidlowegoParametru() throws LiczbaException {
 		int nieproprawnaLiczbaDoKonwersji = -1;
-		liczba = new Liczba(nieproprawnaLiczbaDoKonwersji);
+		try {
+			liczba = new Liczba(nieproprawnaLiczbaDoKonwersji);
+		}
+		catch (Exception e) {
+			// poszedl wyjatek czyli to czego oczekujemy
+			if (!(e instanceof LiczbaException)) {
+				fail("Konstruktor rzucił nieoczekiwany wyjatek");
+			}
+		}
+	}
+
+	public final void testKonwersja0NaSzstemBinarny() throws LiczbaException {
+		Liczba liczbaZerowa = new Liczba(0);
+		int system = 2;
+		String wynikKonwersji = liczbaZerowa.konwersjaNaInnySystem(system);
+		assertEquals("0", wynikKonwersji);
 	}
 
 	public final void testKonwersjaNaSzstemBinarny() {
@@ -44,7 +63,7 @@ public class LiczbaTestJUnit3 extends TestCase {
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);// odp.100
 		assertFalse(wynikKonwersji.equals("24"));
 	}
-	
+
 	public final void testKonwersjaNaSzstemPiatkowy() {
 		int system = 5;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);

@@ -11,7 +11,7 @@ public class Liczba {
 		poprawnoscLiczby(liczba);
 	}
 
-	public void poprawnoscLiczby(int liczba) throws LiczbaException {
+	private void poprawnoscLiczby(int liczba) throws LiczbaException {
 		if (liczba < 0) {
 			throw new LiczbaException(" Nieprawidlowa liczba");
 		}
