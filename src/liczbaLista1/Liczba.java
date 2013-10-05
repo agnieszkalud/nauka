@@ -6,18 +6,9 @@ public class Liczba {
 
 	private static String tablicaHex[] = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F" };
 
-	public Liczba(int liczba) {
+	public Liczba(int liczba) throws LiczbaException {
 		this.liczba = liczba;
-		try {
-			poprawnoscLiczby(liczba);
-			// for (int system = 2; system <= 16; system++) {
-
-			// System.out.println("liczba " + liczba + " w sytemie " + system +
-			// " = " + konwersjaNaInnySystem(system));
-			// }
-		} catch (LiczbaException e) {
-			System.out.println(e.getMessage());
-		}
+		poprawnoscLiczby(liczba);
 	}
 
 	public void poprawnoscLiczby(int liczba) throws LiczbaException {
