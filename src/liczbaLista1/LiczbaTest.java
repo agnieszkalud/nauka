@@ -34,15 +34,15 @@ public class LiczbaTest {
 		wynikKonwersji.equals("10000");
 	}
 
-	@Ignore
-	@Test(timeout = 500)
+
+	@Test(timeout = 999999999)
 	public final void testKonwersjaNaSzstemTrójkowy() {
-		int system = 3;
+		int system = 16;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
 		wynikKonwersji.equals("121");
 	}
 
-	@Test(timeout = 10)
+	@Ignore
 	public final void testKonwersjaNaSzstemCzworkowy() {
 		int system = 4;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);// odp.100
@@ -61,8 +61,9 @@ public class LiczbaTest {
 		int system = 6;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);// odp.24
 		wynikKonwersji.equals("23");
-	}
+	}// TODO nie zglasza bledu?
 
+	@Test
 	public final void testKonwersjaNaSzstemSiodemkowy() {
 		int system = 7;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
@@ -107,14 +108,14 @@ public class LiczbaTest {
 	@Test
 	public final void testKonwersjaNaSzstemTrzynastkowy() {
 		int system = 13;
-		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);// odp. 13
+		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
 		wynikKonwersji.equals("13");
 	}
 
 	@Test
 	public final void testKonwersjaNaSzstemCznernastkowy() {
 		int system = 14;
-		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);// odp. 12
+		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
 		wynikKonwersji.equals("12");
 	}
 
