@@ -17,7 +17,10 @@ public class Liczba {
 		}
 	}
 
-	public String konwersjaNaInnySystem(int podstawa) {
+	public String konwersjaNaInnySystem(int podstawa) throws LiczbaException {
+
+		sprawdzPodstawe(podstawa);
+
 		String liczbaHex = "";
 		int dana = liczba;
 		if (dana == 0) {
@@ -28,6 +31,13 @@ public class Liczba {
 			dana = dana / podstawa;
 		}
 		return liczbaHex;
+	}
+
+	private void sprawdzPodstawe(int podstawa) throws LiczbaException {
+		if (podstawa < 2 || podstawa > 16) {
+			throw new LiczbaException(" Nieprawidlowy system");
+		}
+
 	}
 
 }

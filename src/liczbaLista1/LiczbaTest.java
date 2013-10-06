@@ -48,8 +48,22 @@ public class LiczbaTest {
 		assertNotNull(liczba);
 	}
 
+	@Test(expected = LiczbaException.class)
+	public final void testPoprawnoscWyjatkuJesliPodanyJestNieprawidlowySystem() throws LiczbaException {
+		int nieprawidlowySystem = -1;
+		try {
+			liczba.konwersjaNaInnySystem(nieprawidlowySystem);
+		} catch (Exception e) {
+			// poszedl wyjatek czyli to czego oczekujemy
+			if (!(e instanceof LiczbaException)) {
+				fail("Konstruktor rzucił nieoczekiwany wyjatek");
+			}
+			assertEquals(e.getMessage(), " Nieprawidlowy system");
+		}
+	}
+
 	@Ignore
-	public final void testKonwersjaNaSzstemBinarny() {
+	public final void testKonwersjaNaSzstemBinarny() throws LiczbaException {
 		int system = 2;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
 		assertTrue(wynikKonwersji.equals("10000"));
@@ -65,91 +79,91 @@ public class LiczbaTest {
 	}
 
 	@Ignore
-	public final void testKonwersjaNaSzstemCzworkowy() {
+	public final void testKonwersjaNaSzstemCzworkowy() throws LiczbaException {
 		int system = 4;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);// odp.100
 		assertFalse(wynikKonwersji.equals("24"));
 	}
 
 	@Test
-	public final void testKonwersjaNaSzstemPiatkowy() {
+	public final void testKonwersjaNaSzstemPiatkowy() throws LiczbaException {
 		int system = 5;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
 		assertEquals("31", wynikKonwersji);
 	}
 
 	@Test
-	public final void testKonwersjiNaSystemSzostkowy() {
+	public final void testKonwersjiNaSystemSzostkowy() throws LiczbaException {
 		int system = 6;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);// odp.24
 		assertFalse(wynikKonwersji.equals("23"));
 	}
 
 	@Test
-	public final void testKonwersjaNaSzstemSiodemkowy() {
+	public final void testKonwersjaNaSzstemSiodemkowy() throws LiczbaException {
 		int system = 7;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
 		assertTrue(wynikKonwersji.equals("22"));
 	}
 
 	@Test
-	public final void testKonwersjaNaSzstemOsemkowy() {
+	public final void testKonwersjaNaSzstemOsemkowy() throws LiczbaException {
 		int system = 8;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
 		assertTrue(wynikKonwersji.equals("20"));
 	}
 
 	@Test
-	public final void testKonwersjaNaSzstemDziewiatkowy() {
+	public final void testKonwersjaNaSzstemDziewiatkowy() throws LiczbaException {
 		int system = 9;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
 		assertEquals("17", wynikKonwersji);
 	}
 
 	@Test
-	public final void testKonwersjaNaSzstemDziesiatkowy() {
+	public final void testKonwersjaNaSzstemDziesiatkowy() throws LiczbaException {
 		int system = 10;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
 		assertTrue(wynikKonwersji.equals("16"));
 	}
 
 	@Test
-	public final void testKonwersjaNaSzstemJedenastkowy() {
+	public final void testKonwersjaNaSzstemJedenastkowy() throws LiczbaException {
 		int system = 11;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
 		assertTrue(wynikKonwersji.equals("15"));
 	}
 
 	@Test
-	public final void testKonwersjaNaSzstemDwunastkowy() {
+	public final void testKonwersjaNaSzstemDwunastkowy() throws LiczbaException {
 		int system = 12;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
 		assertEquals("14", wynikKonwersji);
 	}
 
 	@Test
-	public final void testKonwersjaNaSzstemTrzynastkowy() {
+	public final void testKonwersjaNaSzstemTrzynastkowy() throws LiczbaException {
 		int system = 13;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
 		assertFalse(wynikKonwersji.equals("10"));
 	}
 
 	@Test
-	public final void testKonwersjaNaSzstemCznernastkowy() {
+	public final void testKonwersjaNaSzstemCznernastkowy() throws LiczbaException {
 		int system = 14;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);// odp.12
 		assertFalse(wynikKonwersji.equals("10"));
 	}
 
 	@Test
-	public final void testKonwersjaNaSzstemPietnastkowy() {
+	public final void testKonwersjaNaSzstemPietnastkowy() throws LiczbaException {
 		int system = 15;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
 		assertEquals("11", wynikKonwersji);
 	}
 
 	@Test
-	public final void testKonwersjaNaSzstemSzesnastkowy() {
+	public final void testKonwersjaNaSzstemSzesnastkowy() throws LiczbaException {
 		int system = 16;
 		String wynikKonwersji = liczba.konwersjaNaInnySystem(system);
 		assertEquals("10", wynikKonwersji);
