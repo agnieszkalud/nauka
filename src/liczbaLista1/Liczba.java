@@ -13,7 +13,7 @@ public class Liczba {
 
 	public void poprawnoscLiczby(int liczba) throws LiczbaException {
 		if (liczba < 0) {
-			throw new LiczbaException(" Nieprawidlowa liczba");
+			throw new LiczbaException("Nieprawidlowa liczba");
 		}
 	}
 
@@ -35,7 +35,7 @@ public class Liczba {
 
 	private void sprawdzPodstawe(int podstawa) throws LiczbaException {
 		if (podstawa < 2 || podstawa > 16) {
-			throw new LiczbaException(" Nieprawidlowy system");
+			throw new LiczbaException("Nieprawidlowy system");
 		}
 
 	}

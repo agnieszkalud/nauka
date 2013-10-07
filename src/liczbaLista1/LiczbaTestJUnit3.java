@@ -7,12 +7,14 @@ public class LiczbaTestJUnit3 extends TestCase {
 	private int liczbaDoKonwersji;
 	private Liczba liczba;
 
+	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
 		this.liczbaDoKonwersji = 16;
 		liczba = new Liczba(liczbaDoKonwersji);
 	}
 
+	@Override
 	protected void tearDown() throws Exception {
 		super.tearDown();
 		liczba = null;
@@ -37,7 +39,7 @@ public class LiczbaTestJUnit3 extends TestCase {
 			if (!(e instanceof LiczbaException)) {
 				fail("Konstruktor rzucił nieoczekiwany wyjatek");
 			}
-			assertEquals(e.getMessage(), " Nieprawidlowa liczba");
+			assertEquals(e.getMessage(), "Nieprawidlowa liczba");
 		}
 	}
 
@@ -50,7 +52,7 @@ public class LiczbaTestJUnit3 extends TestCase {
 			if (!(e instanceof LiczbaException)) {
 				fail("Konstruktor rzucił nieoczekiwany wyjatek");
 			}
-			assertEquals(e.getMessage(), " Nieprawidlowy system");
+			assertEquals(e.getMessage(), "Nieprawidlowy system");
 		}
 	}
 
