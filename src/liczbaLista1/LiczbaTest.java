@@ -37,7 +37,7 @@ public class LiczbaTest {
 			if (!(e instanceof LiczbaException)) {
 				fail("Konstruktor rzucił nieoczekiwany wyjatek");
 			}
-			assertEquals(e.getMessage(), " Nieprawidlowa liczba");
+			assertEquals(e.getMessage(), "Nieprawidlowa liczba");
 		}
 	}
 
@@ -51,15 +51,7 @@ public class LiczbaTest {
 	@Test(expected = LiczbaException.class)
 	public final void testPoprawnoscWyjatkuJesliPodanyJestNieprawidlowySystem() throws LiczbaException {
 		int nieprawidlowySystem = -1;
-		try {
-			liczba.konwersjaNaInnySystem(nieprawidlowySystem);
-		} catch (Exception e) {
-			// poszedl wyjatek czyli to czego oczekujemy
-			if (!(e instanceof LiczbaException)) {
-				fail("Konstruktor rzucił nieoczekiwany wyjatek");
-			}
-			assertEquals(e.getMessage(), " Nieprawidlowy system");
-		}
+		liczba.konwersjaNaInnySystem(nieprawidlowySystem);
 	}
 
 	@Ignore
